@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM UD</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a GYM UD</h1>
+    </header>
+    <section class="formulario">
+        <h2>Por favor, proporciona tus datos:</h2>
+        <form id="formulario" method="get" action="ServerletGYM" enctype="multipart/form-data">
+            <div class="input-container">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" >
+            </div>
+            <div class="input-container">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" >
+            </div>
+            <div class="input-container">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" name="correo" id="correo" >
+            </div>
+            <div class="input-container">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono">
+            </div>
+            <div class="input-container">
+                <label for="peso">Peso (kg):</label>
+                <input type="text" name="peso" id="peso">
+            </div>
+            <div class="input-container">
+                <label for="estatura">Estatura (cm):</label>
+                <input type="text" name="estatura" id="estatura" >
+            </div>
+            <div class="input-container">
+                <input type="submit" value="Enviar">
+            </div>
+            
+        </form>
+        
+        
+    
+    </section>
+</body>
+</html>

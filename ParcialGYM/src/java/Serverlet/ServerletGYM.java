@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Clientes.*;
+import Datos.*;
 
 
 /**
@@ -37,6 +38,8 @@ public class ServerletGYM extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             Datoscliente dc = new Datoscliente();
+            DBdatos datosDB = new DBdatos();
+            
           
             
             dc.setNombre(request.getParameter("nombre"));
@@ -71,6 +74,7 @@ public class ServerletGYM extends HttpServlet {
             }
             
             
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -89,7 +93,12 @@ public class ServerletGYM extends HttpServlet {
             out.println("<br>Estatura: "+ dc.getEstatura()+"CM<br>");          
             out.println("<br>IMC: "+ dc.calcularIMC(dc.getPeso(), dc.getEstatura())+"<br>");
             
-            
+            out.println("<form id=\"formulario\" method=\"get\" action=\"Inicio\">");
+            out.println("<div class=\"input-container\">");
+            out.println("<input type=\"submit\" value=\"Ver tabla\">");
+            out.println("</div>");
+            out.println("</form>");
+                     
             out.println("<br><form method=\"get\" action=\"ServerletRutina\">");
             out.println("<h2>Selecciona tu objetivo:</h2>");
             out.println("<section class=\"input-container\">"); 
@@ -109,6 +118,11 @@ public class ServerletGYM extends HttpServlet {
             out.println("<input type=\"radio\" name=\"objetivo\" id=\"mejorar-resistencia\" value=\"Mejorar Resistencia\" required>");           
             out.println("</div>"); 
             
+            out.println("<div class=\"input-container\">");
+            out.println("<label for=\"dias\">Dias que va hacer ejercicio a la semana (entre 2 y 6): </label>");
+            out.println("<input type=\"text\" name=\"dias\" id=\"dias\" >");
+            out.println("</div>");
+            
             out.println("<div class=\"input-container\">"); 
             out.println("<input type=\"submit\" value=\"Ver Rutina\">");
             out.println("</form>");
@@ -116,9 +130,14 @@ public class ServerletGYM extends HttpServlet {
             out.println("</section>"); 
             out.println("</body>");
             out.println("</html>");
+            
+            
+            datosDB.insertarContacto(dc);
+            
         }
+        
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

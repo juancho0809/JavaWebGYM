@@ -51,7 +51,9 @@ public class ServerletRutina extends HttpServlet {
             Datoscliente dc = new Datoscliente();
             dc.setRutina(request.getParameter("objetivo"));
             String objetivo = request.getParameter("objetivo");
-            
+            String diasString = request.getParameter("dias");
+            int dias = Integer.parseInt(diasString);
+
             if("Bajar de peso".equals(objetivo)){
                 Definicion definicion = new Definicion();
                 definicion.sets();
@@ -131,38 +133,42 @@ public class ServerletRutina extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<link rel=\"stylesheet\" href=\"styles.css\">");
-            out.println("<title>Rutina Semanal</title>");
+            out.println("<title>Rutina Semana</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<section class=formulario>");
             out.println("<h1>Rutina para " + dc.getRutina()+"</h1>" );
             out.println(rut.getConsejo());
-
-            // Iterar a través de los días de la semana
-            for (int i = 0; i < rutinaSemana.size(); i++) {
-                out.println("<h2>Rutina " + (i + 1) + "</h2>");
-                out.println("<ul>");
-                
-                
-                int cantejercicios = 0;
-                
-                List<Ejercicios> ejerciciosRandom = new ArrayList<>(rutinaSemana.get(i));
-                
-                Collections.shuffle(ejerciciosRandom);
-                
-                for (Ejercicios ejercicio : ejerciciosRandom) {
-                    if (cantejercicios >= 4) {
-                        break;
-                    }
-                    out.println("<li>" + ejercicio.getNombre() + " (" + ejercicio.getTipoejercicio() + ") " + rut.getReps() + " x " + rut.getSets() + "</li>");
-                    out.println("<img src=\"img/" + ejercicio.getNombre() + ".png\" alt=\"" + ejercicio.getNombre() + "\">");
-                    cantejercicios++;
-                }
-                
-                out.println("</ul>");
-            }
-            out.println("</section>"); 
             
+            Collections.shuffle(rutinaSemana);
+            
+            if(dias >= 2 && dias <= 5){
+                for (int i = 0; i < rutinaSemana.size(); i++) {
+                    out.println("<h2>Rutina " + (i + 1) + "</h2>");
+                    out.println("<ul>");
+
+
+                    int cantejercicios = 0;
+
+                    List<Ejercicios> ejerciciosRandom = new ArrayList<>(rutinaSemana.get(i));
+
+                    Collections.shuffle(ejerciciosRandom);
+
+                    for (Ejercicios ejercicio : ejerciciosRandom) {
+                        if (cantejercicios >= 4) {
+                            break;
+                        }
+                        out.println("<li>" + ejercicio.getNombre() + " (" + ejercicio.getTipoejercicio() + ") " + rut.getReps() + " x " + rut.getSets() + "</li>");
+                        out.println("<img src=\"img/" + ejercicio.getNombre() + ".png\" alt=\"" + ejercicio.getNombre() + "\">");
+                        cantejercicios++;
+                    }
+
+                    out.println("</ul>");
+                }
+                out.println("</section>"); 
+            }else{
+                response.sendRedirect("index.html");
+            }
 
         }
     }

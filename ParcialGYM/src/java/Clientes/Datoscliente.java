@@ -10,13 +10,30 @@ package Clientes;
  */
 public class Datoscliente {
     
-    private String nombre;
-    private String apellido;
-    private String correo;
-    private String celular;
-    private String estatura;
-    private String peso;
-    private String rutina;
+    int id;
+    String nombre;
+    String apellido;
+    String correo;
+    String celular;
+    String estatura;
+    String peso;
+    String rutina;
+    String dias;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getDias() {
+        return dias;
+    }
+
+    public void setDias(String dias) {
+        this.dias = dias;
+    }
 
     public String getRutina() {
         return rutina;

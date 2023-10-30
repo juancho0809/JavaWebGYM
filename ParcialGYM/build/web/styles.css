@@ -9,7 +9,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #68A642;
+    background-color: #5DA034;
     margin: 0;
     padding: 0;
 }
@@ -51,7 +51,7 @@ input[type="number"] {
 }
 
 input[type="radio"] {
-    margin-right: 20px;
+    margin-right: 5px;
 }
 
 input[type="submit"] {
@@ -66,4 +66,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #555;
+}
+.links {
+    text-decoration: none;
+    color: #68A642;
+}
+
+.links:hover {
+    color: #555; 
 }

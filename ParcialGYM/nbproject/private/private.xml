@@ -3,13 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/SetEjercicios/Ejercicios.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Rutina/Rutina.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Clientes/Datoscliente.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/SetEjercicios/Brazo.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Rutina/Definicion.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Rutina/Resistencia.java</file>
-            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Rutina/MasaMuscular.java</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Serverlet/CargaDato.java</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/web/VistaUsuarios.jsp</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Datos/DBdatos.java</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Serverlet/InsertarDatos.java</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Serverlet/Inicio.java</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/web/index.html</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/web/insertarUsuario.html</file>
+            <file>file:/C:/Users/juand/Desktop/U.Distrital/3er%20Semestre/Prog.%20Avanzada/PruebasServerlet/Parcial/ParcialGYM/src/java/Datos/DBconexion.java</file>
         </group>
     </open-files>
 </project-private>
